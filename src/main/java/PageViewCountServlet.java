@@ -9,7 +9,13 @@ public class PageViewCountServlet extends HttpServlet {
     private int count = 0;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        count++;
+        String reset = request.getParameter("reset");
+
+        if (reset != null && reset.equals("true")) {
+            count = 0;
+        } else {
+            count++;
+        }
 
         response.getWriter().printf("Page views: %d", count);
     }
