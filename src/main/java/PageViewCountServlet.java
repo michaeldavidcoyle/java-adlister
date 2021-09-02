@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/count")
+@WebServlet(urlPatterns = "/page_views")
 public class PageViewCountServlet extends HttpServlet {
     private int count = 0;
 
