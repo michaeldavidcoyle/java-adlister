@@ -16,9 +16,10 @@ public class Album implements Serializable {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    // Should probably never be used.
+//    public void setId(int id) {
+//        this.id = id;
+//    }
 
     public String getArtist() {
         return this.artist;
