@@ -52,7 +52,7 @@
         <label for="tomatoes"><input type="checkbox" name="toppings" id="tomatoes" value="tomatoes"> tomatoes</label><br>
         <label for="jalepenos"><input type="checkbox" name="toppings" id="jalepenos" value="jalepenos"> jalepenos</label><br>
         <label for="address">Delivery Address</label>
-        <textarea name="address" id="address" cols="30" rows="10"></textarea><br>
+        <input type="text" name="address" id="address" cols="30" rows="10"><br>
         <button type="submit">Place Order</button>
     </form>
 </body>
