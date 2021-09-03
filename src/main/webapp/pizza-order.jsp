@@ -50,7 +50,7 @@
         <label for="bell-peppers"><input type="checkbox" name="toppings" id="bell-peppers" value="bell-peppers"> bell peppers</label><br>
         <label for="onions"><input type="checkbox" name="toppings" id="onions" value="onions"> onions</label><br>
         <label for="tomatoes"><input type="checkbox" name="toppings" id="tomatoes" value="tomatoes"> tomatoes</label><br>
-        <label for="jalepeños"><input type="checkbox" name="toppings" id="jalepeños" value="jalepeños"> jalepeños</label><br>
+        <label for="jalepenos"><input type="checkbox" name="toppings" id="jalepenos" value="jalepenos"> jalepenos</label><br>
         <label for="address">Delivery Address</label>
         <textarea name="address" id="address" cols="30" rows="10"></textarea><br>
         <button type="submit">Place Order</button>
