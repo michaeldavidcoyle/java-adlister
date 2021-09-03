@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@include file="/partials/head.jsp" %>
     <title>Login</title>
 </head>
 <body>
+<%@include file="/partials/navbar.jsp" %>
 <%
     String username = request.getParameter("username");
     String password = request.getParameter("password");
@@ -30,5 +32,7 @@
     <input type="password" name="password" id="password" placeholder="Enter password">
     <button type="submit">Submit</button>
 </form>
+
+<%@include file="/partials/scripts.jsp" %>
 </body>
 </html>
