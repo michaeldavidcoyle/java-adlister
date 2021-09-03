@@ -50,7 +50,9 @@
         <label for="bell-peppers"><input type="checkbox" name="toppings" id="bell-peppers"> anchovies</label><br>
         <label for="onions"><input type="checkbox" name="toppings" id="onions"> onions</label><br>
         <label for="tomatoes"><input type="checkbox" name="toppings" id="tomatoes"> tomatoes</label><br>
-        <label for="jalepeños"><input type="checkbox" name="toppings" id="jalepeños"> jalepeños</label>
+        <label for="jalepeños"><input type="checkbox" name="toppings" id="jalepeños"> jalepeños</label><br>
+        <label for="address">Delivery Address</label>
+        <textarea name="address" id="address" cols="30" rows="10"></textarea>
     </form>
 </body>
 </html>
