@@ -9,6 +9,12 @@ public class Quote implements Serializable {
     public Quote() {
     }
 
+    public Quote(int id, String content, Author author) {
+        this.id = id;
+        this.content = content;
+        this.author = author;
+    }
+
     public int getId() {
         return this.id;
     }
