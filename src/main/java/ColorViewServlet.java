@@ -7,7 +7,9 @@ import java.io.IOException;
 public class ColorViewServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String color = request.getParameter("color");
+        request.setAttribute("color", color);
+        request.getRequestDispatcher("/colorview.jsp").forward(request, response);
     }
 
     @Override
