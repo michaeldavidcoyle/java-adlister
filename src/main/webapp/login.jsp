@@ -7,28 +7,28 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>Login</title>
-  </head>
-  <body>
-  <%
+</head>
+<body>
+<%
     String username = request.getParameter("username");
     String password = request.getParameter("password");
 
     if (request.getMethod().equals("POST")) {
-      if (username.equals("admin") && password.equals("password")){
-        response.sendRedirect("/profile.jsp");
-      } else{
-        response.sendRedirect("/login.jsp");
-      }
+        if (username.equals("admin") && password.equals("password")) {
+            response.sendRedirect("/profile.jsp");
+        } else {
+            response.sendRedirect("/login.jsp");
+        }
     }
-  %>
-  <form action="/login.jsp" method="POST">
+%>
+<form action="/login.jsp" method="POST">
     <label for="username">Username</label>
     <input type="text" name="username" id="username" placeholder="Enter username">
     <label for="password">Password</label>
     <input type="password" name="password" id="password" placeholder="Enter password">
     <button type="submit">Submit</button>
-  </form>
-  </body>
+</form>
+</body>
 </html>
