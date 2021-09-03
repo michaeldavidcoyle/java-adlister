@@ -13,7 +13,7 @@
 </head>
 <body>
 <%@include file="/partials/navbar.jsp" %>
-$END$
+<h1>Profile</h1>
 <%@include file="/partials/scripts.jsp" %>
 </body>
 </html>
