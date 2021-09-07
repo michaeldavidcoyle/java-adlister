@@ -15,7 +15,7 @@
 <body>
     <%@include file="/partials/navbar.jsp"%>
     <div class="container">
-        <h1>Ads</h1>
+        <h1>dao.Ads</h1>
         <c:forEach var="ad" items="${allAds}">
             <div class="item">
                 <h3>${ad.title}</h3>

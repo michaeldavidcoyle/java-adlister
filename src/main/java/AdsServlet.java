@@ -1,3 +1,6 @@
+import dao.DaoFactory;
+import models.Ad;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
