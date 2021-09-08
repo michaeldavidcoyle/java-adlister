@@ -12,12 +12,11 @@ public class ViewProfileServlet extends HttpServlet {
         HttpSession currentSession = request.getSession();
         String authorizedUser = (String) currentSession.getAttribute("user");
 
-        if (authorizedUser != null) {
-            if (authorizedUser.equals("admin")) {
-                request.getRequestDispatcher("WEB-INF/profile.jsp").forward(request, response);
-            }
+        if (authorizedUser == null) {
+            response.sendRedirect("/login");
+        } else {
+            request.getRequestDispatcher("WEB-INF/profile.jsp").forward(request, response);
         }
 
-        response.sendRedirect("/login");
     }
 }
