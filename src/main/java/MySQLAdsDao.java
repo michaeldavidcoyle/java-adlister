@@ -36,14 +36,14 @@ public class MySQLAdsDao implements Ads {
                     resultSet.getLong("userId"),
                     resultSet.getString("title"),
                     resultSet.getString("description")
-                );
+                ));
             }
-
-            return ads;
         } catch (SQLException e) {
             System.out.printf("Oops, something went wrong: %s%n", e.getMessage());
             e.printStackTrace();
         }
+
+        return ads;
     }
 
     @Override
@@ -69,5 +69,7 @@ public class MySQLAdsDao implements Ads {
             System.out.printf("Oops, something went wrong: %s%n", e.getMessage());
             e.printStackTrace();
         }
+
+        return null;
     }
 }
