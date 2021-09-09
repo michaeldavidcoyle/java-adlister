@@ -1,7 +1,9 @@
-import java.sql.*;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.ResultSet;
 import com.mysql.cj.jdbc.Driver;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +35,7 @@ public class MySQLAdsDao implements Ads {
 
             while (resultSet.next()) {
                 ads.add(new Ad(
-                    resultSet.getLong("userId"),
+                    resultSet.getLong("user_id"),
                     resultSet.getString("title"),
                     resultSet.getString("description")
                 ));
@@ -58,13 +60,11 @@ public class MySQLAdsDao implements Ads {
 
         try {
             Statement statement = connection.createStatement();
-            statement.executeUpdate(insertQuery, statement.RETURN_GENERATED_KEYS);
+            statement.executeUpdate(insertQuery, Statement.RETURN_GENERATED_KEYS);
 
             ResultSet resultSet = statement.getGeneratedKeys();
 
-            if (resultSet.next()) {
-                return resultSet.getLong(1);
-            }
+            return resultSet.getLong(1);
         } catch (SQLException e) {
             System.out.printf("Oops, something went wrong: %s%n", e.getMessage());
             e.printStackTrace();
