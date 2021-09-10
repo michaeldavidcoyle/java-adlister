@@ -31,14 +31,15 @@ public class MySQLUsersDao implements Users {
             statement.setString(1, username);
 
             ResultSet resultSet = statement.executeQuery();
-            resultSet.next();
 
-            return new User(
-                    resultSet.getLong(1),
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    resultSet.getString(4)
-            );
+            if (resultSet.next()) {
+                return new User(
+                        resultSet.getLong(1),
+                        resultSet.getString(2),
+                        resultSet.getString(3),
+                        resultSet.getString(4)
+                );
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
