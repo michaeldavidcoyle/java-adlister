@@ -29,6 +29,10 @@
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
             </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input id="confirm-password" name="confirm-password" class="form-control" type="password">
+            </div>
             <input type="submit" class="btn btn-primary btn-block" value="Register">
         </form>
     </div>
