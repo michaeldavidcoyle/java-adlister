@@ -38,6 +38,7 @@ public class RegisterServlet extends HttpServlet {
 
         user.setUsername(username);
         user.setEmail(email);
+        // hashing takes place in the setPassword method
         user.setPassword(password);
 
         DaoFactory.getUsersDao().insert(user);
